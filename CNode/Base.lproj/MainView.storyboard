@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q2n-L5-C6v">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnJ-QN-pfp">
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnJ-QN-pfp" userLabel="MainHeader" customClass="MainNavigationViewController" customModule="CNode" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <items>
                                             <navigationItem title="Title" id="2ik-g6-Vmd">
@@ -33,11 +33,11 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-HU-xoV">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="221" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-HU-xoV" userLabel="MainTable">
                                         <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleItem" rowHeight="78" id="Cna-n5-F3c">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleItem" rowHeight="78" id="Cna-n5-F3c" userLabel="TableCell">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="78"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cna-n5-F3c" id="FTd-mT-fug">
