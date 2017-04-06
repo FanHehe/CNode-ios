@@ -11,8 +11,8 @@
 		A773E30D6D9D4DC56D4EB21F /* Pods_CNodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A56AD0BCBEA5DB768FC5EEF /* Pods_CNodeUITests.framework */; };
 		B7C2B93639041BF21B745135 /* Pods_CNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8AC98F2E25AEB9DBE501DE /* Pods_CNode.framework */; };
 		FD7452D21E954399000B093E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452D11E954399000B093E /* AppDelegate.swift */; };
-		FD7452D41E954399000B093E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452D31E954399000B093E /* ViewController.swift */; };
-		FD7452D71E954399000B093E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7452D51E954399000B093E /* Main.storyboard */; };
+		FD7452D41E954399000B093E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452D31E954399000B093E /* MainViewController.swift */; };
+		FD7452D71E954399000B093E /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7452D51E954399000B093E /* MainView.storyboard */; };
 		FD7452D91E954399000B093E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7452D81E954399000B093E /* Assets.xcassets */; };
 		FD7452DC1E954399000B093E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7452DA1E954399000B093E /* LaunchScreen.storyboard */; };
 		FD7452E71E954399000B093E /* CNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452E61E954399000B093E /* CNodeTests.swift */; };
@@ -48,8 +48,8 @@
 		CA5FEAF8CD4B4D7D74659D61 /* Pods-CNode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNode.release.xcconfig"; path = "Pods/Target Support Files/Pods-CNode/Pods-CNode.release.xcconfig"; sourceTree = "<group>"; };
 		FD7452CE1E954399000B093E /* CNode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7452D11E954399000B093E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD7452D31E954399000B093E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FD7452D61E954399000B093E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD7452D31E954399000B093E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FD7452D61E954399000B093E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainView.storyboard; sourceTree = "<group>"; };
 		FD7452D81E954399000B093E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD7452DB1E954399000B093E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD7452DD1E954399000B093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,12 +137,9 @@
 		FD7452D01E954399000B093E /* CNode */ = {
 			isa = PBXGroup;
 			children = (
-				FD7452D11E954399000B093E /* AppDelegate.swift */,
-				FD7452D31E954399000B093E /* ViewController.swift */,
-				FD7452D51E954399000B093E /* Main.storyboard */,
-				FD7452D81E954399000B093E /* Assets.xcassets */,
-				FD7452DA1E954399000B093E /* LaunchScreen.storyboard */,
-				FD7452DD1E954399000B093E /* Info.plist */,
+				FD7453D91E95FCB9000B093E /* Controller */,
+				FD7453D81E95FCA4000B093E /* Views */,
+				FD7453D71E95FC96000B093E /* Assets */,
 			);
 			path = CNode;
 			sourceTree = "<group>";
@@ -163,6 +160,33 @@
 				FD7452F31E954399000B093E /* Info.plist */,
 			);
 			path = CNodeUITests;
+			sourceTree = "<group>";
+		};
+		FD7453D71E95FC96000B093E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FD7452DD1E954399000B093E /* Info.plist */,
+				FD7452D81E954399000B093E /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		FD7453D81E95FCA4000B093E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD7452D51E954399000B093E /* MainView.storyboard */,
+				FD7452DA1E954399000B093E /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FD7453D91E95FCB9000B093E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD7452D11E954399000B093E /* AppDelegate.swift */,
+				FD7452D31E954399000B093E /* MainViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +310,7 @@
 			files = (
 				FD7452DC1E954399000B093E /* LaunchScreen.storyboard in Resources */,
 				FD7452D91E954399000B093E /* Assets.xcassets in Resources */,
-				FD7452D71E954399000B093E /* Main.storyboard in Resources */,
+				FD7452D71E954399000B093E /* MainView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD7452D41E954399000B093E /* ViewController.swift in Sources */,
+				FD7452D41E954399000B093E /* MainViewController.swift in Sources */,
 				FD7452D21E954399000B093E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,12 +510,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FD7452D51E954399000B093E /* Main.storyboard */ = {
+		FD7452D51E954399000B093E /* MainView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FD7452D61E954399000B093E /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainView.storyboard;
 			sourceTree = "<group>";
 		};
 		FD7452DA1E954399000B093E /* LaunchScreen.storyboard */ = {
@@ -709,6 +733,7 @@
 				FD7452F81E954399000B093E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD7452F91E954399000B093E /* Build configuration list for PBXNativeTarget "CNodeTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +742,7 @@
 				FD7452FB1E954399000B093E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD7452FC1E954399000B093E /* Build configuration list for PBXNativeTarget "CNodeUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +751,7 @@
 				FD7452FE1E954399000B093E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
