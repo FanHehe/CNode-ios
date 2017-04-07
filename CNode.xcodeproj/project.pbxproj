@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		153B2EBBE3D5138B7666D01C /* libPods-CNodeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F491B7EB654E71E4D4835D22 /* libPods-CNodeUITests.a */; };
-		6DD10578ED30AB0B9999997D /* libPods-CNode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B52B35FE63C2CC2637823FD /* libPods-CNode.a */; };
-		BE9682F504E038E8752DA7EB /* libPods-CNodeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DD45F64BC1C6AF2D392A14 /* libPods-CNodeTests.a */; };
+		3945E8A0CE9444E6D1A56692 /* Pods_CNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295A1B3986DA02707A6CFB09 /* Pods_CNode.framework */; };
+		B52E0E8E8A9A9512E432C4E6 /* Pods_CNodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7AB1A3FE1D9B9FD1E0E7C9 /* Pods_CNodeTests.framework */; };
+		E5B0920157FD696B678102C3 /* Pods_CNodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7782D7103EB8D4A1B2C09A /* Pods_CNodeUITests.framework */; };
 		FD7452D21E954399000B093E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452D11E954399000B093E /* AppDelegate.swift */; };
 		FD7452D41E954399000B093E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452D31E954399000B093E /* MainViewController.swift */; };
 		FD7452D71E954399000B093E /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7452D51E954399000B093E /* MainView.storyboard */; };
@@ -40,15 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B52B35FE63C2CC2637823FD /* libPods-CNode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CNode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7DA915F86FA85CEAD87186 /* Pods-CNodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNodeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CNodeUITests/Pods-CNodeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		257A4A2713CAFF3729B574DE /* Pods-CNodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNodeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CNodeUITests/Pods-CNodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		49DD45F64BC1C6AF2D392A14 /* libPods-CNodeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CNodeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		295A1B3986DA02707A6CFB09 /* Pods_CNode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CNode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B7782D7103EB8D4A1B2C09A /* Pods_CNodeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CNodeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7AB1A3FE1D9B9FD1E0E7C9 /* Pods_CNodeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CNodeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFA97FF5DFA5F39E9D77B90 /* Pods-CNode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CNode/Pods-CNode.debug.xcconfig"; sourceTree = "<group>"; };
 		9FC62496BCEF09C19432B972 /* Pods-CNodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNodeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CNodeTests/Pods-CNodeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B71A496FBF67D2D63E7EB1B2 /* Pods-CNodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNodeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CNodeTests/Pods-CNodeTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA5FEAF8CD4B4D7D74659D61 /* Pods-CNode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNode.release.xcconfig"; path = "Pods/Target Support Files/Pods-CNode/Pods-CNode.release.xcconfig"; sourceTree = "<group>"; };
-		F491B7EB654E71E4D4835D22 /* libPods-CNodeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CNodeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7452CE1E954399000B093E /* CNode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7452D11E954399000B093E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD7452D31E954399000B093E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DD10578ED30AB0B9999997D /* libPods-CNode.a in Frameworks */,
+				3945E8A0CE9444E6D1A56692 /* Pods_CNode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9682F504E038E8752DA7EB /* libPods-CNodeTests.a in Frameworks */,
+				B52E0E8E8A9A9512E432C4E6 /* Pods_CNodeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				153B2EBBE3D5138B7666D01C /* libPods-CNodeUITests.a in Frameworks */,
+				E5B0920157FD696B678102C3 /* Pods_CNodeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +98,9 @@
 		678A3E7752292EDD6200BB87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B52B35FE63C2CC2637823FD /* libPods-CNode.a */,
-				49DD45F64BC1C6AF2D392A14 /* libPods-CNodeTests.a */,
-				F491B7EB654E71E4D4835D22 /* libPods-CNodeUITests.a */,
+				295A1B3986DA02707A6CFB09 /* Pods_CNode.framework */,
+				3F7AB1A3FE1D9B9FD1E0E7C9 /* Pods_CNodeTests.framework */,
+				3B7782D7103EB8D4A1B2C09A /* Pods_CNodeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
