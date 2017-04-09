@@ -10,6 +10,9 @@
 		3945E8A0CE9444E6D1A56692 /* Pods_CNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295A1B3986DA02707A6CFB09 /* Pods_CNode.framework */; };
 		B52E0E8E8A9A9512E432C4E6 /* Pods_CNodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7AB1A3FE1D9B9FD1E0E7C9 /* Pods_CNodeTests.framework */; };
 		E5B0920157FD696B678102C3 /* Pods_CNodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7782D7103EB8D4A1B2C09A /* Pods_CNodeUITests.framework */; };
+		FD23F9331E977CA000C09115 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23F9321E977CA000C09115 /* MainTableViewCell.swift */; };
+		FD5B90441E9A4C3C00733E3F /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B90431E9A4C3C00733E3F /* Fetch.swift */; };
+		FD5B90461E9A861B00733E3F /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B90451E9A861B00733E3F /* Adapter.swift */; };
 		FD7452D21E954399000B093E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452D11E954399000B093E /* AppDelegate.swift */; };
 		FD7452D41E954399000B093E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452D31E954399000B093E /* MainViewController.swift */; };
 		FD7452D71E954399000B093E /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7452D51E954399000B093E /* MainView.storyboard */; };
@@ -17,9 +20,7 @@
 		FD7452DC1E954399000B093E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7452DA1E954399000B093E /* LaunchScreen.storyboard */; };
 		FD7452E71E954399000B093E /* CNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452E61E954399000B093E /* CNodeTests.swift */; };
 		FD7452F21E954399000B093E /* CNodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452F11E954399000B093E /* CNodeUITests.swift */; };
-		FD7454161E9667B8000B093E /* ArticleShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7454151E9667B8000B093E /* ArticleShort.swift */; };
-		FD74541A1E96920B000B093E /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7454191E96920B000B093E /* MainNavigationViewController.swift */; };
-		FD74541C1E969530000B093E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74541B1E969530000B093E /* MainTableViewController.swift */; };
+		FD7454161E9667B8000B093E /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7454151E9667B8000B093E /* Topics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		9FC62496BCEF09C19432B972 /* Pods-CNodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNodeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CNodeTests/Pods-CNodeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B71A496FBF67D2D63E7EB1B2 /* Pods-CNodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNodeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CNodeTests/Pods-CNodeTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA5FEAF8CD4B4D7D74659D61 /* Pods-CNode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNode.release.xcconfig"; path = "Pods/Target Support Files/Pods-CNode/Pods-CNode.release.xcconfig"; sourceTree = "<group>"; };
+		FD23F9321E977CA000C09115 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		FD5B90431E9A4C3C00733E3F /* Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
+		FD5B90451E9A861B00733E3F /* Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		FD7452CE1E954399000B093E /* CNode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7452D11E954399000B093E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD7452D31E954399000B093E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -62,9 +66,7 @@
 		FD7452ED1E954399000B093E /* CNodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CNodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7452F11E954399000B093E /* CNodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNodeUITests.swift; sourceTree = "<group>"; };
 		FD7452F31E954399000B093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD7454151E9667B8000B093E /* ArticleShort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleShort.swift; sourceTree = "<group>"; };
-		FD7454191E96920B000B093E /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
-		FD74541B1E969530000B093E /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		FD7454151E9667B8000B093E /* Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FD5B90421E9A4C2C00733E3F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FD5B90431E9A4C3C00733E3F /* Fetch.swift */,
+				FD5B90451E9A861B00733E3F /* Adapter.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		FD7452C51E954399000B093E = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +154,7 @@
 		FD7452D01E954399000B093E /* CNode */ = {
 			isa = PBXGroup;
 			children = (
+				FD5B90421E9A4C2C00733E3F /* Utils */,
 				FD7454141E9658C1000B093E /* Models */,
 				FD7453D91E95FCB9000B093E /* Controller */,
 				FD7453D81E95FCA4000B093E /* Views */,
@@ -182,10 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				FD7452D51E954399000B093E /* MainView.storyboard */,
-				FD7452D31E954399000B093E /* MainViewController.swift */,
 				FD7452DA1E954399000B093E /* LaunchScreen.storyboard */,
-				FD7454191E96920B000B093E /* MainNavigationViewController.swift */,
-				FD74541B1E969530000B093E /* MainTableViewController.swift */,
+				FD23F9321E977CA000C09115 /* MainTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -194,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				FD7452D11E954399000B093E /* AppDelegate.swift */,
+				FD7452D31E954399000B093E /* MainViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -201,7 +212,7 @@
 		FD7454141E9658C1000B093E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FD7454151E9667B8000B093E /* ArticleShort.swift */,
+				FD7454151E9667B8000B093E /* Topics.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -490,10 +501,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD74541A1E96920B000B093E /* MainNavigationViewController.swift in Sources */,
-				FD7454161E9667B8000B093E /* ArticleShort.swift in Sources */,
+				FD5B90441E9A4C3C00733E3F /* Fetch.swift in Sources */,
+				FD5B90461E9A861B00733E3F /* Adapter.swift in Sources */,
+				FD7454161E9667B8000B093E /* Topics.swift in Sources */,
 				FD7452D41E954399000B093E /* MainViewController.swift in Sources */,
-				FD74541C1E969530000B093E /* MainTableViewController.swift in Sources */,
+				FD23F9331E977CA000C09115 /* MainTableViewCell.swift in Sources */,
 				FD7452D21E954399000B093E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

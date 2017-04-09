@@ -8,13 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var tableView: UITableView!
+var test = [
+    "id": "123",
+    "tab": "推荐",
+    "title": "bia苏是如何炼成的",
+    "content": "contentcontentcontentcontentcontent",
+    "top": false,
+    "good": false,
+    "replyCount": "44",
+    "visitCount": "2312",
+    "createAt": "3213213",
+    "lastReplyAt": "23213123",
+    "logiinName": "fanhehe",
+    "avatarUrl": "picture",
+    "authorId": "21321312312"
+    ] as [String : Any]
+
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tView: UITableView!
+    fileprivate var newsList = [Topic]( repeating: Topic(test), count: 1);
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+        tView.delegate = self
+        tView.dataSource = self
+        
+        Fetch.get("https://cnodejs.org/api/v1/topics") { data in
+            print(data)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,17 +45,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
-        return 2
+        return newsList.count
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let ID: String = "TableCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: ID, for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)CELL"
+        let cell = tableView.dequeueReusableCell(withIdentifier: ID, for: indexPath) as! MainTableViewCell
+        cell.data = newsList[indexPath.row]
+//        let alertView = UIAlertView()
+//        alertView.title = "系统提示"
+//        alertView.message = "\(newsList.count)"
+//        alertView.addButton(withTitle: "取消")
+//        alertView.addButton(withTitle: "确定")
+//        alertView.cancelButtonIndex=0
+//        alertView.delegate=self;
+//        alertView.show()
         return cell
     }
 }

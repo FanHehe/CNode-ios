@@ -9,7 +9,7 @@
 import Foundation
 
 class Author {
-    var loginName: String? = "-";
+    var loginName: String? = "";
     var avatarUrl: String? = "";
     
     init (_ loginName: String?, _ avatarUrl: String?) {
@@ -23,7 +23,7 @@ class Author {
     
 }
 
-public class ArticleShort {
+public class Topic {
     
     var id: String? = "0";
     var tab: String? = "ask";
@@ -32,8 +32,8 @@ public class ArticleShort {
     var top: Bool? = false;
     var good: Bool? = false;
     
-    var replyCount: Int? = 1;
-    var visitCount: Int? = 1;
+    var replyCount: String? = "1";
+    var visitCount: String? = "1";
     
     var createAt: String? = "-";
     var lastReplyAt: String? = "-";
@@ -48,8 +48,8 @@ public class ArticleShort {
         self.content = content;
         self.top = top;
         self.good = good;
-        self.replyCount = replyCount;
-        self.visitCount = visitCount;
+        self.replyCount = String(replyCount);
+        self.visitCount = String(visitCount);
         self.createAt = createAt;
         self.lastReplyAt = lastReplyAt;
         self.author = Author(loginName, avatarUrl);
@@ -66,8 +66,8 @@ public class ArticleShort {
         self.content = options["content"] as? String;
         self.top = options["top"] as? Bool;
         self.good = options["good"] as? Bool;
-        self.replyCount = options["replyCount"] as? Int;
-        self.visitCount = options["visitCount"] as? Int;
+        self.replyCount = options["replyCount"] as? String;
+        self.visitCount = options["visitCount"] as? String;
         self.createAt = options["createAt"] as? String;
         self.lastReplyAt = options["lastReplyAt"] as? String;
         self.author = Author(loginName, avatarUrl);
