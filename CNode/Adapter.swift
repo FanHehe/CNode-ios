@@ -18,6 +18,7 @@ class NetAdapter: Adapter {
     
     static func Topics (data: JSON) -> [Topic] {
         
+        print(DFormat.getDateTime(string: "2017-04-10T10:00:27.733Z"))
         return data.flatMap { it in
             let item = it.1
             return Topic(
@@ -29,7 +30,7 @@ class NetAdapter: Adapter {
                 good: item["good"].boolValue,
                 replyCount: item["reply_count"].intValue,
                 visitCount: item["visit_count"].intValue,
-                createAt: item["create_at"].stringValue,
+                createAt: DFormat.getDateTime(string: item["create_at"].stringValue),
                 lastReplyAt: item["last_reply_at"].stringValue,
                 loginName: item["author"]["loginname"].stringValue,
                 avatarUrl: item["author"]["avatar_url"].stringValue,

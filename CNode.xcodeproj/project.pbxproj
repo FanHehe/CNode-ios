@@ -10,6 +10,7 @@
 		3945E8A0CE9444E6D1A56692 /* Pods_CNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295A1B3986DA02707A6CFB09 /* Pods_CNode.framework */; };
 		B52E0E8E8A9A9512E432C4E6 /* Pods_CNodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7AB1A3FE1D9B9FD1E0E7C9 /* Pods_CNodeTests.framework */; };
 		E5B0920157FD696B678102C3 /* Pods_CNodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7782D7103EB8D4A1B2C09A /* Pods_CNodeUITests.framework */; };
+		FD23A92D1E9B8036003BB2CE /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23A92C1E9B8036003BB2CE /* Format.swift */; };
 		FD23F9331E977CA000C09115 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23F9321E977CA000C09115 /* MainTableViewCell.swift */; };
 		FD5B90441E9A4C3C00733E3F /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B90431E9A4C3C00733E3F /* Fetch.swift */; };
 		FD5B90461E9A861B00733E3F /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B90451E9A861B00733E3F /* Adapter.swift */; };
@@ -50,6 +51,7 @@
 		9FC62496BCEF09C19432B972 /* Pods-CNodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNodeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CNodeTests/Pods-CNodeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B71A496FBF67D2D63E7EB1B2 /* Pods-CNodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNodeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CNodeTests/Pods-CNodeTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA5FEAF8CD4B4D7D74659D61 /* Pods-CNode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CNode.release.xcconfig"; path = "Pods/Target Support Files/Pods-CNode/Pods-CNode.release.xcconfig"; sourceTree = "<group>"; };
+		FD23A92C1E9B8036003BB2CE /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		FD23F9321E977CA000C09115 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		FD5B90431E9A4C3C00733E3F /* Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
 		FD5B90451E9A861B00733E3F /* Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				FD5B90431E9A4C3C00733E3F /* Fetch.swift */,
 				FD5B90451E9A861B00733E3F /* Adapter.swift */,
+				FD23A92C1E9B8036003BB2CE /* Format.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				FD5B90441E9A4C3C00733E3F /* Fetch.swift in Sources */,
 				FD5B90461E9A861B00733E3F /* Adapter.swift in Sources */,
 				FD7454161E9667B8000B093E /* Topics.swift in Sources */,
+				FD23A92D1E9B8036003BB2CE /* Format.swift in Sources */,
 				FD7452D41E954399000B093E /* MainViewController.swift in Sources */,
 				FD23F9331E977CA000C09115 /* MainTableViewCell.swift in Sources */,
 				FD7452D21E954399000B093E /* AppDelegate.swift in Sources */,
