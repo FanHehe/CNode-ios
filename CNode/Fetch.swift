@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class Fetch {
     static let fetch = Fetch()
-    static func get (_ url: String, callback: @escaping (_ data: Any) -> ()) {
+    static func get (_ url: String, callback: @escaping (_ data: JSON) -> ()) {
         Alamofire.request(url)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
@@ -25,7 +25,7 @@ class Fetch {
         }
     }
     
-    static func get (_ url: String, params: [String: String], callback: @escaping (_ data: Any) -> ()) {
+    static func get (_ url: String, params: [String: String], callback: @escaping (_ data: JSON) -> ()) {
         Alamofire.request(url, method: .get, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {

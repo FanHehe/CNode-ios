@@ -24,12 +24,15 @@ class MainTableViewCell: UITableViewCell {
     
     var data: Topic? {
         didSet {
+            print(data!.tab!)
             tabLabel.text = data!.tab!
             titleLabel.text = data!.title!
             username.text = data!.author?.loginName
             
             replyCount.text = data!.replyCount!
             visitCount.text = " / \(data!.visitCount!)"
+            
+            createAt.text = data!.createAt!
         }
     }
     

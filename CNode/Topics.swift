@@ -23,7 +23,7 @@ class Author {
     
 }
 
-public class Topic {
+public class Topic: Swift.CustomStringConvertible {
     
     var id: String? = "0";
     var tab: String? = "ask";
@@ -41,19 +41,37 @@ public class Topic {
     var author: Author?;
     var authorId: String? = "0";
     
-    init (id: String, tab: String, title: String, content: String, top: Bool, good: Bool, replyCount: Int, visitCount: Int, createAt: String, lastReplyAt: String, loginName: String, avatarUrl: String, authorId: String) {
-        self.id = id;
-        self.tab = tab;
-        self.title = title;
-        self.content = content;
-        self.top = top;
-        self.good = good;
-        self.replyCount = String(replyCount);
-        self.visitCount = String(visitCount);
-        self.createAt = createAt;
-        self.lastReplyAt = lastReplyAt;
-        self.author = Author(loginName, avatarUrl);
-        self.authorId = authorId;
+    init (id: String?, tab: String?, title: String?, content: String?, top: Bool?, good: Bool?, replyCount: String?, visitCount: String?, createAt: String?, lastReplyAt: String?, loginName: String?, avatarUrl: String?, authorId: String?) {
+        self.id = id
+        self.tab = tab
+        self.title = title
+        self.content = content
+        self.top = top
+        self.good = good
+        self.replyCount = replyCount
+        self.visitCount = visitCount
+        self.createAt = createAt
+        self.lastReplyAt = lastReplyAt
+        self.author = Author(loginName, avatarUrl)
+        self.authorId = authorId
+    }
+    init (id: String?, tab: String?, title: String?, content: String?, top: Bool?, good: Bool?, replyCount: Int?, visitCount: Int?, createAt: String?, lastReplyAt: String?, loginName: String?, avatarUrl: String?, authorId: String?) {
+        
+        let rCount = (replyCount != nil) ? replyCount! : 0
+        let vCount = (visitCount != nil) ? replyCount! : 0
+        
+        self.id = id
+        self.tab = tab
+        self.title = title
+        self.content = content
+        self.top = top
+        self.good = good
+        self.replyCount = String(rCount)
+        self.visitCount = String(vCount)
+        self.createAt = createAt
+        self.lastReplyAt = lastReplyAt
+        self.author = Author(loginName, avatarUrl)
+        self.authorId = authorId
     }
     
     init (_ options: [String: Any?]) {
@@ -72,5 +90,12 @@ public class Topic {
         self.lastReplyAt = options["lastReplyAt"] as? String;
         self.author = Author(loginName, avatarUrl);
         self.authorId = options["authorId"] as? String;
+    }
+    
+    public var description: String {
+        if let string = self.title {
+            return string
+        }
+        return "unknow"
     }
 }

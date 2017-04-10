@@ -34,8 +34,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tView.delegate = self
         tView.dataSource = self
         
-        Fetch.get("https://cnodejs.org/api/v1/topics") { data in
-            print(data)
+        Fetch.get("https://cnodejs.org/api/v1/topics") { [weak self] data in
+            self!.newsList += NetAdapter.Topics(data: data["data"])
+            self!.tView.reloadData()
         }
     }
 
