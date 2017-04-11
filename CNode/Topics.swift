@@ -25,23 +25,24 @@ class Author {
 
 public class Topic: Swift.CustomStringConvertible {
     
-    var id: String? = "0";
-    var tab: String? = "ask";
-    var title: String? = "-";
-    var content: String? = "-";
-    var top: Bool? = false;
-    var good: Bool? = false;
+    var id: String? = "0"
+    var tab: String? = "ask"
+    var title: String? = "-"
+    var content: String? = "-"
+    var top: Bool? = false
+    var good: Bool? = false
     
-    var replyCount: String? = "1";
-    var visitCount: String? = "1";
+    var replyCount: String? = "1"
+    var visitCount: String? = "1"
     
-    var createAt: String? = "-";
-    var lastReplyAt: String? = "-";
+    var createAt: String? = "-"
+    var offsetTime: String? = ""
+    var lastReplyAt: String? = "-"
     
-    var author: Author?;
-    var authorId: String? = "0";
+    var author: Author?
+    var authorId: String? = "0"
     
-    init (id: String?, tab: String?, title: String?, content: String?, top: Bool?, good: Bool?, replyCount: String?, visitCount: String?, createAt: String?, lastReplyAt: String?, loginName: String?, avatarUrl: String?, authorId: String?) {
+    init (id: String?, tab: String?, title: String?, content: String?, top: Bool?, good: Bool?, replyCount: String?, visitCount: String?, createAt: String?, offsetTime: String?, lastReplyAt: String?, loginName: String?, avatarUrl: String?, authorId: String?) {
         self.id = id
         self.tab = tab
         self.title = title
@@ -51,11 +52,13 @@ public class Topic: Swift.CustomStringConvertible {
         self.replyCount = replyCount
         self.visitCount = visitCount
         self.createAt = createAt
+        self.offsetTime = offsetTime
         self.lastReplyAt = lastReplyAt
+        
         self.author = Author(loginName, avatarUrl)
         self.authorId = authorId
     }
-    init (id: String?, tab: String?, title: String?, content: String?, top: Bool?, good: Bool?, replyCount: Int?, visitCount: Int?, createAt: String?, lastReplyAt: String?, loginName: String?, avatarUrl: String?, authorId: String?) {
+    init (id: String?, tab: String?, title: String?, content: String?, top: Bool?, good: Bool?, replyCount: Int?, visitCount: Int?, createAt: String?, offsetTime: String?, lastReplyAt: String?, loginName: String?, avatarUrl: String?, authorId: String?) {
         
         let rCount = (replyCount != nil) ? replyCount! : 0
         let vCount = (visitCount != nil) ? replyCount! : 0
@@ -69,6 +72,7 @@ public class Topic: Swift.CustomStringConvertible {
         self.replyCount = String(rCount)
         self.visitCount = String(vCount)
         self.createAt = createAt
+        self.offsetTime = offsetTime
         self.lastReplyAt = lastReplyAt
         self.author = Author(loginName, avatarUrl)
         self.authorId = authorId

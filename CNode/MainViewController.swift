@@ -8,26 +8,10 @@
 
 import UIKit
 
-var test = [
-    "id": "123",
-    "tab": "推荐",
-    "title": "bia苏是如何炼成的",
-    "content": "contentcontentcontentcontentcontent",
-    "top": false,
-    "good": false,
-    "replyCount": "44",
-    "visitCount": "2312",
-    "createAt": "3213213",
-    "lastReplyAt": "23213123",
-    "logiinName": "fanhehe",
-    "avatarUrl": "picture",
-    "authorId": "21321312312"
-    ] as [String : Any]
-
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tView: UITableView!
-    fileprivate var newsList = [Topic]( repeating: Topic(test), count: 1);
+    fileprivate var newsList = [Topic]();
     
     override func viewDidLoad() {
         super.viewDidLoad()

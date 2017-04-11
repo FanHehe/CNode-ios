@@ -18,19 +18,24 @@ class NetAdapter: Adapter {
     
     static func Topics (data: JSON) -> [Topic] {
         
-        print(DFormat.getDateTime(string: "2017-04-10T10:00:27.733Z"))
-        return data.flatMap { it in
-            let item = it.1
+        return data.flatMap { (index, item) in
+            
+            let tab = Tab[item["tab"].stringValue]
+            
+            let createAt = DFormat.toISOTime(string: item["create_at"].stringValue)
+            let offsetTime = DFormat.toTimeOffset(string: item["create_at"].stringValue)
+            
             return Topic(
                 id: item["id"].stringValue,
-                tab: Tab[item["tab"].stringValue],
+                tab: tab,
                 title: item["title"].stringValue,
                 content: "",
                 top: item["top"].boolValue,
                 good: item["good"].boolValue,
                 replyCount: item["reply_count"].intValue,
                 visitCount: item["visit_count"].intValue,
-                createAt: DFormat.getDateTime(string: item["create_at"].stringValue),
+                createAt: createAt,
+                offsetTime: offsetTime,
                 lastReplyAt: item["last_reply_at"].stringValue,
                 loginName: item["author"]["loginname"].stringValue,
                 avatarUrl: item["author"]["avatar_url"].stringValue,
@@ -38,6 +43,7 @@ class NetAdapter: Adapter {
             )
         }
     }
+    
 }
 
 extension NetAdapter {

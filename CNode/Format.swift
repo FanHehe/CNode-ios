@@ -21,12 +21,32 @@ class DFormat: Format{
         case gmt = ""
         case dst = "yyyy-MM-dd HH:mm:ss"
     }
-    static func getDateTime(string: String) -> String {
+    static func toISOTime(string: String) -> String {
         formatter.locale = Locale.current
         formatter.dateFormat = dateFormat.iso.rawValue
         let date = formatter.date(from: string)
         formatter.dateFormat = dateFormat.dst.rawValue
-        
+        guard date != nil else { return "" }
         return formatter.string(from: date!)
+    }
+    
+    
+    static func toTimeOffset(string: String) -> String {
+        formatter.dateFormat = dateFormat.iso.rawValue
+        let date = formatter.date(from: string)
+        let now = Date()
+        let offset = now.timeIntervalSince1970 - (date?.timeIntervalSince1970)!
+        return self.offsetToString(offset: offset)
+    }
+    
+    static func offsetToString(offset: Double) -> String {
+        return self.offsetToString(offset: Int(offset))
+    }
+    
+    static func offsetToString(offset: Int) -> String {
+        if offset / 60 == 0 { return "\(offset)秒前" }
+        if offset / 60 / 60 == 0 { return "\(offset/60)分钟前" }
+        if offset / 60 / 60 / 24 == 0 { return "\(offset/60/60)小时前"}
+        return "\(offset / 60 / 60 / 24)天前"
     }
 }

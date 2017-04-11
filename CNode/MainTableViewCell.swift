@@ -24,6 +24,11 @@ class MainTableViewCell: UITableViewCell {
     
     var data: Topic? {
         didSet {
+//            guard data!.tab != nil else { data!.tab = "" }
+//            guard data!.title != nil else { data!.title = "" }
+//            guard data!.replyCount != nil else { data!.replyCount = "" }
+//            guard data!.visitCount != nil else { data!.visitCount = "" }
+//            guard data!.createAt != nil else { data!.createAt = "" }
             tabLabel.text = data!.tab!
             titleLabel.text = data!.title!
             username.text = data!.author?.loginName
@@ -32,6 +37,7 @@ class MainTableViewCell: UITableViewCell {
             visitCount.text = " / \(data!.visitCount!)"
             
             createAt.text = data!.createAt!
+            timeOffset.text = data!.offsetTime!
         }
     }
     
