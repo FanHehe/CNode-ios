@@ -6,7 +6,7 @@ target 'CNode' do
    use_frameworks!
    pod 'Alamofire', '~> 4.4'
    pod 'SwiftyJSON'
-   pod 'SwiftDate', '~> 4.0'
+   pod 'Kingfisher'
   # Pods for CNode
 
   target 'CNodeTests' do

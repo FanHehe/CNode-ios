@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainTableViewCell: UITableViewCell {
 
@@ -24,20 +25,38 @@ class MainTableViewCell: UITableViewCell {
     
     var data: Topic? {
         didSet {
-//            guard data!.tab != nil else { data!.tab = "" }
-//            guard data!.title != nil else { data!.title = "" }
-//            guard data!.replyCount != nil else { data!.replyCount = "" }
-//            guard data!.visitCount != nil else { data!.visitCount = "" }
-//            guard data!.createAt != nil else { data!.createAt = "" }
-            tabLabel.text = data!.tab!
-            titleLabel.text = data!.title!
-            username.text = data!.author?.loginName
+            if let tab = data!.tab {
+                tabLabel.text = tab
+            }
             
-            replyCount.text = data!.replyCount!
-            visitCount.text = " / \(data!.visitCount!)"
+            if let title = data!.title {
+                titleLabel.text = title
+            }
             
-            createAt.text = data!.createAt!
-            timeOffset.text = data!.offsetTime!
+            if let un = data!.author?.loginName {
+                username.text = un
+            }
+            
+            if let rc = data!.replyCount {
+                replyCount.text = rc
+            }
+            
+            if let vc = data!.visitCount {
+                visitCount.text = " / \(vc)"
+            }
+            
+            if let ca = data!.createAt {
+                createAt.text = ca
+            }
+            
+            if let to = data!.offsetTime {
+                timeOffset.text = to
+            }
+            
+            if let avatarUrl = data!.author?.avatarUrl {
+                let url = URL(string: avatarUrl)
+                avatar.kf.setImage(with: url)
+            }
         }
     }
     
