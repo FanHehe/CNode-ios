@@ -22,6 +22,10 @@
 		FD7452E71E954399000B093E /* CNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452E61E954399000B093E /* CNodeTests.swift */; };
 		FD7452F21E954399000B093E /* CNodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7452F11E954399000B093E /* CNodeUITests.swift */; };
 		FD7454161E9667B8000B093E /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7454151E9667B8000B093E /* Topics.swift */; };
+		FD9833D31E9DE7A100496BA3 /* SideBarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9833D21E9DE7A100496BA3 /* SideBarView.storyboard */; };
+		FD9833D91E9DEB6D00496BA3 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9833D81E9DEB6D00496BA3 /* SideBarViewController.swift */; };
+		FDD7591C1E9F703D00DB02D2 /* BlogView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD7591B1E9F703D00DB02D2 /* BlogView.storyboard */; };
+		FDD7591E1E9F718400DB02D2 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7591D1E9F718400DB02D2 /* BlogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		FD7452F11E954399000B093E /* CNodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNodeUITests.swift; sourceTree = "<group>"; };
 		FD7452F31E954399000B093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD7454151E9667B8000B093E /* Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
+		FD9833D21E9DE7A100496BA3 /* SideBarView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideBarView.storyboard; sourceTree = "<group>"; };
+		FD9833D81E9DEB6D00496BA3 /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		FDD7591B1E9F703D00DB02D2 /* BlogView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlogView.storyboard; sourceTree = "<group>"; };
+		FDD7591D1E9F718400DB02D2 /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +207,8 @@
 				FD7452D51E954399000B093E /* MainView.storyboard */,
 				FD7452DA1E954399000B093E /* LaunchScreen.storyboard */,
 				FD23F9321E977CA000C09115 /* MainTableViewCell.swift */,
+				FD9833D21E9DE7A100496BA3 /* SideBarView.storyboard */,
+				FDD7591B1E9F703D00DB02D2 /* BlogView.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -208,6 +218,8 @@
 			children = (
 				FD7452D11E954399000B093E /* AppDelegate.swift */,
 				FD7452D31E954399000B093E /* MainViewController.swift */,
+				FD9833D81E9DEB6D00496BA3 /* SideBarViewController.swift */,
+				FDD7591D1E9F718400DB02D2 /* BlogViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -341,7 +353,9 @@
 			files = (
 				FD7452DC1E954399000B093E /* LaunchScreen.storyboard in Resources */,
 				FD7452D91E954399000B093E /* Assets.xcassets in Resources */,
+				FD9833D31E9DE7A100496BA3 /* SideBarView.storyboard in Resources */,
 				FD7452D71E954399000B093E /* MainView.storyboard in Resources */,
+				FDD7591C1E9F703D00DB02D2 /* BlogView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,8 +523,10 @@
 				FD7454161E9667B8000B093E /* Topics.swift in Sources */,
 				FD23A92D1E9B8036003BB2CE /* Format.swift in Sources */,
 				FD7452D41E954399000B093E /* MainViewController.swift in Sources */,
+				FDD7591E1E9F718400DB02D2 /* BlogViewController.swift in Sources */,
 				FD23F9331E977CA000C09115 /* MainTableViewCell.swift in Sources */,
 				FD7452D21E954399000B093E /* AppDelegate.swift in Sources */,
+				FD9833D91E9DEB6D00496BA3 /* SideBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

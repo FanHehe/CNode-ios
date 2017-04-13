@@ -22,18 +22,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q2n-L5-C6v">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnJ-QN-pfp" userLabel="MainHeader">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
                                         <items>
                                             <navigationItem title="Title" id="2ik-g6-Vmd">
-                                                <barButtonItem key="leftBarButtonItem" title="三" id="NWj-Qi-qEH"/>
+                                                <barButtonItem key="leftBarButtonItem" title="三" id="NWj-Qi-qEH">
+                                                    <connections>
+                                                        <segue destination="drs-9I-d7q" kind="presentation" identifier="SideBar" id="aNY-zY-vu0"/>
+                                                    </connections>
+                                                </barButtonItem>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="221" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-HU-xoV" userLabel="MainTable">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="24" width="375" height="623"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="78" id="Cna-n5-F3c" userLabel="TableCell" customClass="MainTableViewCell" customModule="CNode" customModuleProvider="target">
@@ -173,9 +177,13 @@
                                                     <outlet property="titleLabel" destination="23U-j6-c3d" id="dyv-Zs-ynT"/>
                                                     <outlet property="username" destination="vk9-NQ-sR6" id="F5X-mC-eK1"/>
                                                     <outlet property="visitCount" destination="Cfo-z4-oSN" id="HUF-Rr-Kli"/>
+                                                    <segue destination="Ct7-T4-Mb9" kind="presentation" identifier="Blog" id="NcL-Pt-wzv"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Q2n-L5-C6v" id="n3H-Wx-7K9"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <constraints>
@@ -190,7 +198,7 @@
                             <constraint firstAttribute="trailing" secondItem="Q2n-L5-C6v" secondAttribute="trailing" id="PLp-uR-Hhz"/>
                             <constraint firstItem="Q2n-L5-C6v" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="UIW-qf-x0o"/>
                             <constraint firstItem="Q2n-L5-C6v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bJP-sF-7lZ"/>
-                            <constraint firstItem="Q2n-L5-C6v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="fVm-Cd-i0b"/>
+                            <constraint firstItem="Q2n-L5-C6v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="fVm-Cd-i0b"/>
                         </constraints>
                     </view>
                     <connections>
@@ -200,6 +208,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--SideBarView-->
+        <scene sceneID="rkZ-uf-NAx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SideBarView" id="drs-9I-d7q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHS-lV-jRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="-139"/>
+        </scene>
+        <!--BlogView-->
+        <scene sceneID="Vhz-WR-lFq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BlogView" id="Ct7-T4-Mb9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOp-Yh-9ff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="37"/>
         </scene>
     </scenes>
 </document>

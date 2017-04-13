@@ -13,6 +13,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tView: UITableView!
     fileprivate var newsList = [Topic]();
     
+    enum SegueType:String {
+        case SideBar
+        case Blog
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tView.delegate = self
@@ -33,6 +38,22 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return newsList.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let segueIdentifier = SegueType.Blog.rawValue
+        let data = newsList[indexPath.row]
+        self.performSegue(withIdentifier: segueIdentifier, sender: data)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let id = segue.identifier, let segueId = SegueType(rawValue: id) else { fatalError("identifier error \(String(describing: segue.identifier)).") }
+        
+        switch segueId {
+            case .Blog :
+                let dest = segue.destination as! BlogViewController
+                dest.data = sender as? Topic
+            case .SideBar: return
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let ID: String = "TableCell"
