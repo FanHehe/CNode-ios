@@ -18,4 +18,4 @@
     * command + b && command + r
 
 ## referrences
-    [cnodejs.org](https://cnodejs.org/)
+[cnodejs.org](https://cnodejs.org/)
